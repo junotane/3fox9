@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 30px;
+  background: #ffffff;
+}
+
+.grid {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.grid a {
+  display: block;
+}
+
+.grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grid a:hover img {
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
